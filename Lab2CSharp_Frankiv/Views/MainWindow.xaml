@@ -1,0 +1,41 @@
+﻿<Window x:Class="Lab2CSharp_Frankiv.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:vm="clr-namespace:Lab2CSharp_Frankiv.ViewModels"
+        Title="MainWindow" Height="350" Width="525">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+<RowDefinition Height="Auto"/>
+<RowDefinition Height="Auto"/>
+<RowDefinition Height="Auto"/>
+<RowDefinition Height="Auto"/>
+
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Name:"/>
+        <TextBox Grid.Row="1" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label Grid.Row="2" Content="Surname:"/>
+        <TextBox Grid.Row="3" Text="{Binding Surname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label Grid.Row="4" Content="Email Address:"/>
+        <TextBox Grid.Row="5" Text="{Binding EmailAddress, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label Grid.Row="6" Content="Date of Birth (YYYY-MM-DD):"/>
+        <DatePicker Grid.Row="7" SelectedDate="{Binding DateOfBirth, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Button Grid.Row="8" Content="Proceed" Command="{Binding ProceedCommand}" HorizontalAlignment="Left" Margin="0,10,0,0"/>
+    </Grid>
+</Window>
